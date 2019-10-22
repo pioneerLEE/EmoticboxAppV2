@@ -4,7 +4,8 @@ import {
   View,
   Text,
   Dimensions,
-  TouchableOpacity
+  TouchableOpacity,
+  SafeAreaView
 } from 'react-native';
 const {width,height}=Dimensions.get('window');
 
@@ -12,9 +13,9 @@ const {width,height}=Dimensions.get('window');
 class Mypage extends React.Component {
   render() {
     return (
-        <View style={styles.container}>
-            
-        </View>
+        <SafeAreaView style={styles.container}>
+            <Text>hello</Text>
+        </SafeAreaView>
         );
     }
 }
@@ -22,7 +23,7 @@ class Mypage extends React.Component {
 const styles = StyleSheet.create({
   container: {
       flex: 1,
-      backgroundColor:'#ffffff',
+      backgroundColor:'red',
   },
 });
 

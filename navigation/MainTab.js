@@ -1,6 +1,7 @@
 import React from 'react';
 import { createAppContainer } from 'react-navigation';
-import { createBottomTabNavigator } from 'react-navigation-tabs';
+import { createMaterialTopTabNavigator } from 'react-navigation-tabs';
+import { createStackNavigator } from 'react-navigation-stack';
 import Home from '../screens/Home';
 import Hot from '../screens/Hot';
 import New from '../screens/New';
@@ -10,64 +11,93 @@ import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 
-
-export default MainTab = createAppContainer(createBottomTabNavigator({
-  HomeScreen: {
+const MainTab = createAppContainer(createMaterialTopTabNavigator({
+  Home: {
      screen: Home,
      navigationOptions: {
-      tabBarIcon: ({ focused }) => (
-        <MaterialCommunityIcons
-          name={focused ? "home" : "home-outline"}
-          size={28}
-          color={focused ? '#36b1bf':'#bcbcbc'}
-        />
-      )
+      title:'HOME',
+      tabBarOptions: {
+        activeTintColor: 'black',
+        inactiveTintColor: 'gray',
+        indicatorStyle:{
+          backgroundColor: 'orange'
+        },
+        style: {
+          backgroundColor: '#fefefe',
+        },
+      }
     }
   },
-  HotScreen: { 
+  Hot: { 
     //screen: ChatTab,
     screen: Hot,
     navigationOptions: {
-      tabBarIcon: ({ focused }) => (
-        <MaterialIcons
-          name={focused ? "whatshot" : "whatshot"}
-          size={27}
-          color={focused ? '#36b1bf':'#bcbcbc'}
-        />
-      )
+      tabBarOptions: {
+        activeTintColor: 'black',
+        inactiveTintColor: 'gray',
+        indicatorStyle:{
+          backgroundColor: 'orange'
+        },
+        style: {
+          backgroundColor: '#fefefe',
+        },
+      }
     }
    },
-   NewScreen: { 
+   New: { 
     screen: New,
     navigationOptions: {
-      tabBarIcon: ({ focused }) => (
-        <MaterialIcons
-          name={focused ? "fiber-new" : "fiber-new"}//109
-          size={27}
-          color={focused ? '#36b1bf':'#bcbcbc'}
-        />
-      )
+      tabBarOptions: {
+        activeTintColor: 'black',
+        inactiveTintColor: 'gray',
+        indicatorStyle:{
+          backgroundColor: 'orange'
+        },
+        style: {
+          backgroundColor: '#fefefe',
+
+        },
+      }
     }
    },
-   Mypage: { 
+   My: { 
     screen: Mypage,
-    navigationOptions:{
-      tabBarIcon: ({ focused }) => (
-        <FontAwesome
-          name={focused ? "user-circle-o" : "user-circle"}//109
-          size={24}
-          color={focused ? '#36b1bf':'#bcbcbc'}
-        />
-      )
+    navigationOptions: {
+      tabBarOptions: {
+        activeTintColor: 'black',
+        inactiveTintColor: 'gray',
+        indicatorStyle:{
+          backgroundColor: 'orange'
+        },
+        style: {
+          backgroundColor: '#fefefe',
+        },
+      }
     }
    },
 }, {
-  initialRouteName: 'HomeScreen',
+  initialRouteName: 'Home',
   defaultNavigationOptions:{
     
   },
   tabBarOptions:{
     showLabel: false,
   }
+}));
+
+
+export default Main = createAppContainer(createStackNavigator({
+  MainScreen: {
+    screen: MainTab,
+    navigationOptions: {
+      headerStyle: {
+        backgroundColor: '#fefefe',
+        shadowColor: 'transparent',
+        borderBottomWidth: 0,
+      },
+      headerTintColor: 'orange',
+      title: 'EmoticBox',
+    },
+  },
 }));
 

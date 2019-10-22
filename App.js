@@ -18,7 +18,8 @@ import {
   View,
   Text,
   Dimensions,
-  TouchableOpacity
+  TouchableOpacity,
+  SafeAreaView
 } from 'react-native';
 
 
@@ -34,7 +35,7 @@ class App extends React.Component {
       
     // );
     return(
-      <MainTab/>
+      <Main/>
     )
   }
 }
