@@ -77,6 +77,7 @@ const MainTab = createAppContainer(createMaterialTopTabNavigator({
    },
 }, {
   initialRouteName: 'Home',
+  swipeEnabled:false,
   defaultNavigationOptions:{
     
   },
