@@ -16,31 +16,25 @@ class HomeBigSection extends React.Component {
   render(){
     return(
       <Swiper style={{height:width}} showsPagination={false}>
-        <View>
-          <Text style={styles.tagText}>{"#귀여운"}</Text>
-          <Text style={styles.emojipackNameText}>{"옴팡지게 따스해 옴팡이"}</Text>
-          <Text style={styles.creatorText}>{"정다슬"}</Text>
-          <View style={styles.emojipackSection}>
-            <View style={styles.emojipackBox}>
-              <Image style={styles.emojiImage} source={{uri: 'http://file3.instiz.net/data/file3/2018/03/16/5/b/8/5b8141787893806877611f1033bbdd29.gif'}}/>
-            </View>
-          </View>
-        </View>
-        <View>
-          <Text style={styles.tagText}>{"#귀여운"}</Text>
-          <Text style={styles.emojipackNameText}>{"옴팡지게 따스해 옴팡이"}</Text>
-          <Text style={styles.creatorText}>{"정다슬"}</Text>
-          <View style={styles.emojipackSection}>
-            <View style={styles.emojipackBox}>
-              <Image style={styles.emojiImage} source={{uri: 'http://file3.instiz.net/data/file3/2018/03/16/5/b/8/5b8141787893806877611f1033bbdd29.gif'}}/>
-            </View>
-          </View>
-        </View>
+        <Section/>
+        <Section/>
       </Swiper>
       
     )
   }
 }
+const Section = ()=>(
+  <View>
+    <Text style={styles.tagText}>{"#귀여운"}</Text>
+    <Text style={styles.emojipackNameText}>{"옴팡지게 따스해 옴팡이"}</Text>
+    <Text style={styles.creatorText}>{"정다슬"}</Text>
+    <View style={styles.emojipackSection}>
+      <View style={styles.emojipackBox}>
+        <Image style={styles.emojiImage} source={{uri: 'http://file3.instiz.net/data/file3/2018/03/16/5/b/8/5b8141787893806877611f1033bbdd29.gif'}}/>
+      </View>
+    </View>
+  </View>
+);
 
 const styles = StyleSheet.create({
   tagText:{
