@@ -15,7 +15,7 @@ import HomeBigSection from './components/HomeBigSection'
 import HomeHot from './components/HomeHot'
 import HomeHotPaySection from './components/HomeHotPaySection';
 import HomeHotFreeSection from './components/HomeHotFreeSection';
-
+import HomeCreator from './components/HomeCreator'
 
 
 class Home extends React.Component {
@@ -28,8 +28,9 @@ class Home extends React.Component {
             <HomeHotPaySection/>
             <LineComponent/>
             <HomeHotFreeSection/>
+            <LineComponent/>
+            <HomeCreator/>
           </ScrollView>
-          
         </View>
         );
     }

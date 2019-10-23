@@ -16,7 +16,7 @@ class HomeHot extends React.Component {
     return (
       <View style={{height:120,flexDirection:'row',alignItems:'center'}}>
         <Image source={{uri: 'https://i.pinimg.com/originals/ac/95/2e/ac952e8833ff7210249b675456e58f37.gif'}}
-        style={{width:90,height:90,backgroundColor:'gray',marginLeft:20}}/>
+        style={{width:90,height:90,marginLeft:20}}/>
         <View style={{height:90,marginLeft:5}}>
           <Text style={{marginTop:17,fontSize:20}}>1</Text>
         </View>
