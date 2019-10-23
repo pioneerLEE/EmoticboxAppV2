@@ -90,13 +90,18 @@ const MainTab = createAppContainer(createMaterialTopTabNavigator({
 export default Main = createAppContainer(createStackNavigator({
   MainScreen: {
     screen: MainTab,
+    headerLayoutPreset:'left',
     navigationOptions: {
       headerStyle: {
         backgroundColor: '#fefefe',
         shadowColor: 'transparent',
         borderBottomWidth: 0,
       },
-      headerTintColor: 'orange',
+      headerTintColor: '#000000',
+      headerTitleStyle:{
+        fontSize:25,
+        letterSpacing: 2
+      },
       title: 'EmoticBox',
     },
   },
