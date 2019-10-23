@@ -8,23 +8,36 @@ import {
   ScrollView,
   Image
 } from 'react-native';
-
+import Swiper from 'react-native-swiper'
 
 const { width, height } = Dimensions.get('window');
 
 class HomeBigSection extends React.Component {
   render(){
     return(
-      <View>
-        <Text style={styles.tagText}>{"#귀여운"}</Text>
-        <Text style={styles.emojipackNameText}>{"옴팡지게 따스해 옴팡이"}</Text>
-        <Text style={styles.creatorText}>{"정다슬"}</Text>
-        <View style={styles.emojipackSection}>
-          <View style={styles.emojipackBox}>
-            <Image style={styles.emojiImage} source={{uri: 'http://file3.instiz.net/data/file3/2018/03/16/5/b/8/5b8141787893806877611f1033bbdd29.gif'}}/>
+      <Swiper style={{height:width}} showsPagination={false}>
+        <View>
+          <Text style={styles.tagText}>{"#귀여운"}</Text>
+          <Text style={styles.emojipackNameText}>{"옴팡지게 따스해 옴팡이"}</Text>
+          <Text style={styles.creatorText}>{"정다슬"}</Text>
+          <View style={styles.emojipackSection}>
+            <View style={styles.emojipackBox}>
+              <Image style={styles.emojiImage} source={{uri: 'http://file3.instiz.net/data/file3/2018/03/16/5/b/8/5b8141787893806877611f1033bbdd29.gif'}}/>
+            </View>
           </View>
         </View>
-      </View>
+        <View>
+          <Text style={styles.tagText}>{"#귀여운"}</Text>
+          <Text style={styles.emojipackNameText}>{"옴팡지게 따스해 옴팡이"}</Text>
+          <Text style={styles.creatorText}>{"정다슬"}</Text>
+          <View style={styles.emojipackSection}>
+            <View style={styles.emojipackBox}>
+              <Image style={styles.emojiImage} source={{uri: 'http://file3.instiz.net/data/file3/2018/03/16/5/b/8/5b8141787893806877611f1033bbdd29.gif'}}/>
+            </View>
+          </View>
+        </View>
+      </Swiper>
+      
     )
   }
 }
