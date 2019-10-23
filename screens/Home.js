@@ -11,11 +11,11 @@ import {
   Image
 } from 'react-native';
 const {width,height}=Dimensions.get('window');
-import HomeBigSection from './components/HomeBigSection'
-import HomeHot from './components/HomeHot'
-import HomeHotPaySection from './components/HomeHotPaySection';
-import HomeHotFreeSection from './components/HomeHotFreeSection';
-import HomeCreator from './components/HomeCreator'
+import HomeBigSection from './Components/HomeBigSection'
+import HomeHotPaySection from './Components/HomeHotPaySection';
+import HomeHotFreeSection from './Components/HomeHotFreeSection';
+import HomeCreator from './Components/HomeCreatorSection'
+import HomeEndSection from './Components/HomeEndSection'
 
 
 class Home extends React.Component {
@@ -30,6 +30,7 @@ class Home extends React.Component {
             <HomeHotFreeSection/>
             <LineComponent/>
             <HomeCreator/>
+            <HomeEndSection/>
           </ScrollView>
         </View>
         );

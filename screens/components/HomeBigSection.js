@@ -8,7 +8,7 @@ import {
   ScrollView,
   Image
 } from 'react-native';
-import PropTypes from 'prop-types';
+
 
 const { width, height } = Dimensions.get('window');
 

@@ -10,7 +10,7 @@ import {
   Image
 } from 'react-native';
 const {width,height}=Dimensions.get('window');
-import NewSection from './components/NewSection'
+import NewSection from './Components/NewSection'
 
 
 class Hot extends React.Component {
