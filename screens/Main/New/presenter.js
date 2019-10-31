@@ -10,7 +10,7 @@ import {
   Image
 } from 'react-native';
 const {width,height}=Dimensions.get('window');
-import NewSection from './Components/NewSection'
+import NewSection from '../../Components/NewSection'
 
 
 class New extends React.Component {
@@ -19,8 +19,6 @@ class New extends React.Component {
         <View style={styles.container}>
           <ScrollView>
             <NewSection/>
-            
-
           </ScrollView>
             
         </View>

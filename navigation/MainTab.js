@@ -6,6 +6,7 @@ import Home from '../screens/Home';
 import Hot from '../screens/Hot';
 import New from '../screens/New';
 import Mypage from '../screens/Mypage';
+import Detail from '../screens/Detail'
 
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
@@ -23,7 +24,7 @@ const MainTab = createAppContainer(createMaterialTopTabNavigator({
           backgroundColor: 'orange'
         },
         style: {
-          backgroundColor: '#fefefe',
+          backgroundColor: '#ffffff',
         },
       }
     }
@@ -39,7 +40,7 @@ const MainTab = createAppContainer(createMaterialTopTabNavigator({
           backgroundColor: 'orange'
         },
         style: {
-          backgroundColor: '#fefefe',
+          backgroundColor: '#ffffff',
         },
       }
     }
@@ -54,7 +55,7 @@ const MainTab = createAppContainer(createMaterialTopTabNavigator({
           backgroundColor: 'orange'
         },
         style: {
-          backgroundColor: '#fefefe',
+          backgroundColor: '#ffffff',
 
         },
       }
@@ -70,7 +71,7 @@ const MainTab = createAppContainer(createMaterialTopTabNavigator({
           backgroundColor: 'orange'
         },
         style: {
-          backgroundColor: '#fefefe',
+          backgroundColor: '#ffffff',
         },
       }
     }
@@ -90,10 +91,10 @@ const MainTab = createAppContainer(createMaterialTopTabNavigator({
 export default Main = createAppContainer(createStackNavigator({
   MainScreen: {
     screen: MainTab,
-    headerLayoutPreset:'left',
     navigationOptions: {
+      headerBackTitle:null,
       headerStyle: {
-        backgroundColor: '#fefefe',
+        backgroundColor: '#ffffff',
         shadowColor: 'transparent',
         borderBottomWidth: 0,
       },
@@ -105,5 +106,23 @@ export default Main = createAppContainer(createStackNavigator({
       title: 'EmoticBox',
     },
   },
+  DefailScreen: {
+    screen:Detail,
+    navigationOptions: {
+      headerBackTitle:null,
+      title: null,
+    },
+  }
+},{
+  initialRouteName: 'MainScreen',
+  defaultNavigationOptions:{
+    headerBackTitle:null,
+    headerStyle:{
+      backgroundColor: '#ffffff',
+        shadowColor: 'transparent',
+        borderBottomWidth: 0,
+    },
+    headerTintColor:'rgb(0,0,0)',  
+  }
 }));
 

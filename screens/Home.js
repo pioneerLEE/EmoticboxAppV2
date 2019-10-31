@@ -10,20 +10,29 @@ import {
   ImageBackground,
   Image
 } from 'react-native';
-const {width,height}=Dimensions.get('window');
+import PropTypes from 'prop-types';
 import HomeBigSection from './Components/HomeBigSection'
 import HomeHotPaySection from './Components/HomeHotPaySection';
 import HomeHotFreeSection from './Components/HomeHotFreeSection';
 import HomeCreator from './Components/HomeCreatorSection'
 import HomeEndSection from './Components/HomeEndSection'
 
+const {width,height}=Dimensions.get('window');
 
 class Home extends React.Component {
+  static propTypes={
+    navigation: PropTypes.shape({
+      navigate: PropTypes.func.isRequired,
+    }).isRequired,
+  };
   render() {
+    const { navigation }= this.props;
     return (
         <View style={styles.container}>
           <ScrollView>
-            <HomeBigSection/>
+            <TouchableOpacity onPressOut={()=>navigation.navigate('DefailScreen')}>
+              <HomeBigSection/>
+            </TouchableOpacity>
             <LineComponent/>
             <HomeHotPaySection/>
             <LineComponent/>

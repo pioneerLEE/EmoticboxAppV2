@@ -28,8 +28,10 @@ class NewSection extends React.Component {
             <Image source={{uri: 'https://i.pinimg.com/originals/ac/95/2e/ac952e8833ff7210249b675456e58f37.gif'}}
             style={{width:90,height:90,backgroundColor:'gray',marginLeft:20}}/>
             <View style={{height:90}}>
-            <Text style={{marginLeft:20,marginTop:10,fontSize:20}}>오버액션토끼</Text>
-            <Text style={{marginLeft:20,marginTop:5,fontSize:15,color:'gray'}}>애소</Text>
+            <View style={{width:width/100*70}}>
+              <Text style={{marginLeft:20,marginTop:20,fontSize:15,letterSpacing: 1}} numberOfLines={1} ellipsizeMode={'tail'}>{"뚠뚠! 핑구&힝구, 우린 돼지니까~"}</Text>
+            </View>
+            <Text style={{marginLeft:20,marginTop:5,fontSize:10,color:'gray'}}>애소</Text>
             <View style={{marginLeft:20,marginTop:15,height:25,width:50,borderColor:'orange',borderRadius:20,borderWidth:1,justifyContent:'center',alignItems:'center'}}>
                 <Text style={{fontSize:12, color:'#FF3F00'}}>$0.9</Text>
             </View>
