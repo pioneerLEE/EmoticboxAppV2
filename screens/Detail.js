@@ -15,7 +15,7 @@ import AntDesign from 'react-native-vector-icons/AntDesign';
 class Detail extends React.Component {
   render() {
     return (
-        <SafeAreaView style={styles.container}>
+        <View style={styles.container}>
           <View>
             <View style={{width:width,flexDirection:'row'}}>
               <Image source={{uri: 'https://i.pinimg.com/originals/ac/95/2e/ac952e8833ff7210249b675456e58f37.gif'}}
@@ -43,33 +43,90 @@ class Detail extends React.Component {
               </View>  
             </View>
             <View style={{width:width, flexDirection:'row',marginTop:20,justifyContent:'center'}}>
-              <View style={{width:(width-40)/3*2,height:40,backgroundColor:'orange',borderRadius:10,justifyContent:'center',alignItems:'center'}}>
+              <TouchableOpacity style={{width:(width-40)/3*2,height:40,backgroundColor:'orange',borderRadius:10,justifyContent:'center',alignItems:'center'}}>
                 <Text style={{color:'#FFFFFF',fontWeight:'bold'}}>GET</Text>
-              </View>
-              <View style={{marginLeft:10,width:(width-40)/3,height:40,backgroundColor:'#c8c8c8',borderRadius:10,justifyContent:'center',alignItems:'center'}}>
-              <Text style={{color:'#FFFFFF',fontWeight:'bold'}}>Sample</Text>
-              </View>
+              </TouchableOpacity>
+              <TouchableOpacity style={{marginLeft:10,width:(width-40)/3,height:40,backgroundColor:'#c8c8c8',borderRadius:10,justifyContent:'center',alignItems:'center'}}>
+                <Text style={{color:'#FFFFFF',fontWeight:'bold'}}>Sample</Text>
+              </TouchableOpacity>
             </View>
           </View>
           <ScrollView style={{marginTop:20,backgroundColor:'#F6F6F4'}}>
-            <View style={{width:width,flexDirection:'row',justifyContent:'center'}}>
-              <Image source={{uri: 'https://img1.daumcdn.net/thumb/R720x0.q80/?scode=mtistory2&fname=http%3A%2F%2Fcfile1.uf.tistory.com%2Fimage%2F2166B933584C237124F003'}}
-              style={{width:(width-20)/4,height:(width-20)/4}}/>
-              <Image source={{uri: 'https://img1.daumcdn.net/thumb/R720x0.q80/?scode=mtistory2&fname=http%3A%2F%2Fcfile1.uf.tistory.com%2Fimage%2F2166B933584C237124F003'}}
-              style={{width:(width-20)/4,height:(width-20)/4}}/>
-              <Image source={{uri: 'https://img1.daumcdn.net/thumb/R720x0.q80/?scode=mtistory2&fname=http%3A%2F%2Fcfile1.uf.tistory.com%2Fimage%2F2166B933584C237124F003'}}
-              style={{width:(width-20)/4,height:(width-20)/4}}/>
-              <Image source={{uri: 'https://img1.daumcdn.net/thumb/R720x0.q80/?scode=mtistory2&fname=http%3A%2F%2Fcfile1.uf.tistory.com%2Fimage%2F2166B933584C237124F003'}}
-              style={{width:(width-20)/4,height:(width-20)/4}}/>
-              
-            </View>
-            
+            <EmojiList/>
           </ScrollView>
-        </SafeAreaView>
+        </View>
         );
     }
 }
 
+
+
+
+
+const EmojiList = () =>(  
+  <View>
+    <View style={{width:width,flexDirection:'row',justifyContent:'space-between',padding:5,marginTop:10}}>
+      <Image source={{uri: 'https://img1.daumcdn.net/thumb/R720x0.q80/?scode=mtistory2&fname=http%3A%2F%2Fcfile1.uf.tistory.com%2Fimage%2F2166B933584C237124F003'}}
+        style={{width:(width-40)/4,height:(width-40)/4}}/>
+      <Image source={{uri: 'https://img1.daumcdn.net/thumb/R720x0.q80/?scode=mtistory2&fname=http%3A%2F%2Fcfile1.uf.tistory.com%2Fimage%2F2166B933584C237124F003'}}
+        style={{width:(width-40)/4,height:(width-40)/4}}/>
+      <Image source={{uri: 'https://img1.daumcdn.net/thumb/R720x0.q80/?scode=mtistory2&fname=http%3A%2F%2Fcfile1.uf.tistory.com%2Fimage%2F2166B933584C237124F003'}}
+        style={{width:(width-40)/4,height:(width-40)/4}}/>
+      <Image source={{uri: 'https://img1.daumcdn.net/thumb/R720x0.q80/?scode=mtistory2&fname=http%3A%2F%2Fcfile1.uf.tistory.com%2Fimage%2F2166B933584C237124F003'}}
+        style={{width:(width-40)/4,height:(width-40)/4}}/>
+    </View>
+    <View style={{width:width,flexDirection:'row',justifyContent:'space-between',padding:5,marginTop:10}}>
+      <Image source={{uri: 'https://img1.daumcdn.net/thumb/R720x0.q80/?scode=mtistory2&fname=http%3A%2F%2Fcfile1.uf.tistory.com%2Fimage%2F2166B933584C237124F003'}}
+        style={{width:(width-40)/4,height:(width-40)/4}}/>
+      <Image source={{uri: 'https://img1.daumcdn.net/thumb/R720x0.q80/?scode=mtistory2&fname=http%3A%2F%2Fcfile1.uf.tistory.com%2Fimage%2F2166B933584C237124F003'}}
+        style={{width:(width-40)/4,height:(width-40)/4}}/>
+      <Image source={{uri: 'https://img1.daumcdn.net/thumb/R720x0.q80/?scode=mtistory2&fname=http%3A%2F%2Fcfile1.uf.tistory.com%2Fimage%2F2166B933584C237124F003'}}
+        style={{width:(width-40)/4,height:(width-40)/4}}/>
+      <Image source={{uri: 'https://img1.daumcdn.net/thumb/R720x0.q80/?scode=mtistory2&fname=http%3A%2F%2Fcfile1.uf.tistory.com%2Fimage%2F2166B933584C237124F003'}}
+        style={{width:(width-40)/4,height:(width-40)/4}}/>
+    </View>  
+    <View style={{width:width,flexDirection:'row',justifyContent:'space-between',padding:5,marginTop:10}}>
+      <Image source={{uri: 'https://img1.daumcdn.net/thumb/R720x0.q80/?scode=mtistory2&fname=http%3A%2F%2Fcfile1.uf.tistory.com%2Fimage%2F2166B933584C237124F003'}}
+        style={{width:(width-40)/4,height:(width-40)/4}}/>
+      <Image source={{uri: 'https://img1.daumcdn.net/thumb/R720x0.q80/?scode=mtistory2&fname=http%3A%2F%2Fcfile1.uf.tistory.com%2Fimage%2F2166B933584C237124F003'}}
+        style={{width:(width-40)/4,height:(width-40)/4}}/>
+      <Image source={{uri: 'https://img1.daumcdn.net/thumb/R720x0.q80/?scode=mtistory2&fname=http%3A%2F%2Fcfile1.uf.tistory.com%2Fimage%2F2166B933584C237124F003'}}
+        style={{width:(width-40)/4,height:(width-40)/4}}/>
+      <Image source={{uri: 'https://img1.daumcdn.net/thumb/R720x0.q80/?scode=mtistory2&fname=http%3A%2F%2Fcfile1.uf.tistory.com%2Fimage%2F2166B933584C237124F003'}}
+        style={{width:(width-40)/4,height:(width-40)/4}}/>
+    </View>  
+    <View style={{width:width,flexDirection:'row',justifyContent:'space-between',padding:5,marginTop:10}}>
+      <Image source={{uri: 'https://img1.daumcdn.net/thumb/R720x0.q80/?scode=mtistory2&fname=http%3A%2F%2Fcfile1.uf.tistory.com%2Fimage%2F2166B933584C237124F003'}}
+        style={{width:(width-40)/4,height:(width-40)/4}}/>
+      <Image source={{uri: 'https://img1.daumcdn.net/thumb/R720x0.q80/?scode=mtistory2&fname=http%3A%2F%2Fcfile1.uf.tistory.com%2Fimage%2F2166B933584C237124F003'}}
+        style={{width:(width-40)/4,height:(width-40)/4}}/>
+      <Image source={{uri: 'https://img1.daumcdn.net/thumb/R720x0.q80/?scode=mtistory2&fname=http%3A%2F%2Fcfile1.uf.tistory.com%2Fimage%2F2166B933584C237124F003'}}
+        style={{width:(width-40)/4,height:(width-40)/4}}/>
+      <Image source={{uri: 'https://img1.daumcdn.net/thumb/R720x0.q80/?scode=mtistory2&fname=http%3A%2F%2Fcfile1.uf.tistory.com%2Fimage%2F2166B933584C237124F003'}}
+        style={{width:(width-40)/4,height:(width-40)/4}}/>
+    </View>  
+    <View style={{width:width,flexDirection:'row',justifyContent:'space-between',padding:5,marginTop:10}}>
+      <Image source={{uri: 'https://img1.daumcdn.net/thumb/R720x0.q80/?scode=mtistory2&fname=http%3A%2F%2Fcfile1.uf.tistory.com%2Fimage%2F2166B933584C237124F003'}}
+        style={{width:(width-40)/4,height:(width-40)/4}}/>
+      <Image source={{uri: 'https://img1.daumcdn.net/thumb/R720x0.q80/?scode=mtistory2&fname=http%3A%2F%2Fcfile1.uf.tistory.com%2Fimage%2F2166B933584C237124F003'}}
+        style={{width:(width-40)/4,height:(width-40)/4}}/>
+      <Image source={{uri: 'https://img1.daumcdn.net/thumb/R720x0.q80/?scode=mtistory2&fname=http%3A%2F%2Fcfile1.uf.tistory.com%2Fimage%2F2166B933584C237124F003'}}
+        style={{width:(width-40)/4,height:(width-40)/4}}/>
+      <Image source={{uri: 'https://img1.daumcdn.net/thumb/R720x0.q80/?scode=mtistory2&fname=http%3A%2F%2Fcfile1.uf.tistory.com%2Fimage%2F2166B933584C237124F003'}}
+        style={{width:(width-40)/4,height:(width-40)/4}}/>
+    </View>  
+    <View style={{width:width,flexDirection:'row',justifyContent:'space-between',padding:5,marginTop:10}}>
+      <Image source={{uri: 'https://img1.daumcdn.net/thumb/R720x0.q80/?scode=mtistory2&fname=http%3A%2F%2Fcfile1.uf.tistory.com%2Fimage%2F2166B933584C237124F003'}}
+        style={{width:(width-40)/4,height:(width-40)/4}}/>
+      <Image source={{uri: 'https://img1.daumcdn.net/thumb/R720x0.q80/?scode=mtistory2&fname=http%3A%2F%2Fcfile1.uf.tistory.com%2Fimage%2F2166B933584C237124F003'}}
+        style={{width:(width-40)/4,height:(width-40)/4}}/>
+      <Image source={{uri: 'https://img1.daumcdn.net/thumb/R720x0.q80/?scode=mtistory2&fname=http%3A%2F%2Fcfile1.uf.tistory.com%2Fimage%2F2166B933584C237124F003'}}
+        style={{width:(width-40)/4,height:(width-40)/4}}/>
+      <Image source={{uri: 'https://img1.daumcdn.net/thumb/R720x0.q80/?scode=mtistory2&fname=http%3A%2F%2Fcfile1.uf.tistory.com%2Fimage%2F2166B933584C237124F003'}}
+        style={{width:(width-40)/4,height:(width-40)/4}}/>
+    </View>                
+  </View>
+)
 const styles = StyleSheet.create({
   container: {
       flex: 1,
