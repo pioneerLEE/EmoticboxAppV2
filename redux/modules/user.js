@@ -53,7 +53,7 @@ function setVerifyUni(){
 // API Actions
 function login(email,password){
   return dispatch =>{
-    return fetch(`/*${API_URL}/login`,{
+    return fetch(`${API_URL}/login`,{
       method: "POST",
       headers:{
         "Content-Type" : "application/json"
@@ -112,8 +112,8 @@ function userinfoRefresh(token){
 
 const initialState = {
     isLoggedIn: false,
-    makeProfile: false,
-    confirmUniv: false,
+    getEmojilist: [],
+    isAudult: false,
   };
   
   // Reducer

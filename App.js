@@ -12,6 +12,7 @@ import AppContainer from "./AppContainer";
 //const { persistor, store } = configureStore(); //함수로 선언했으므로... 뒤에 ()
 
 import MainTab from './navigation/MainTab';
+import Landing from './screens/Landing'
 
 import {
   StyleSheet,
@@ -35,7 +36,7 @@ class App extends React.Component {
       
     // );
     return(
-      <Main/>
+      <Landing/>
     )
   }
 }
