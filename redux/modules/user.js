@@ -12,8 +12,6 @@ import { AsyncStorage } from 'react-native';
 const LOG_IN = "LOG_IN";
 const LOG_OUT = "LOG_OUT";
 const SET_USER = "SET_USER";
-const SET_PROFILE = "SET_PROFILE";
-const SET_VERIFYUNI = "SET_VERIFYUNI";
 
 // Action Creators
 
@@ -37,24 +35,11 @@ function logOut(){
   }
 }
 
-function setProfile(){
-  return{
-    type: SET_PROFILE
-  }
-}
-
-function setVerifyUni(){
-  return{
-    type: SET_VERIFYUNI
-  }
-}
-
-
 // API Actions
 function login(email,password){
-  return dispatch =>{
-    return fetch(`${API_URL}/login`,{
-      method: "POST",
+  return dispatch => {
+    return fetch(`${API_URL}/signin`,{
+      method:"POST",
       headers:{
         "Content-Type" : "application/json"
       },
@@ -64,60 +49,19 @@ function login(email,password){
       })
     })
     .then(response => response.json())
-    .then(json => {
-      if(json.token && json.User){
+    .then(json =>{
+      if(json.token){
         dispatch(setLogIn(json.token));
-        dispatch(setUser(json.User));
-        if(json.User.nick){
-          dispatch(setProfile());
-        }
-        if(json.User.schoolemail){
-          dispatch(setVerifyUni());
-        }
-        return true;
-      }else{
-        return false;
-      }
-    });
-  }
-}
-function userinfoRefresh(token){
-  return dispatch =>{
-    return fetch(`${API_URL}/userinfo`,{
-      method:'get',
-      headers:{
-        "Content-Type" : "application/json",
-        "Authorization": `Bearer ${token}`,
-      },
-    })
-    .then(response => response.json())
-    .then(json=>{
-      if(json.User){
-        dispatch(setUser(json.User));
-        if(json.User.nick){
-          dispatch(setProfile());
-        }
-        if(json.User.schoolemail){
-          dispatch(setVerifyUni());
-        }
-        return true;
-      }else{
-        dispatch(logOut());
-        return false;
+        dispatch(setUser(json.userinfo));
       }
     })
   }
 }
 // Initial State
-
 const initialState = {
     isLoggedIn: false,
-    getEmojilist: [],
-    isAudult: false,
   };
-  
   // Reducer
-  
   function reducer(state = initialState, action) {
     switch (action.type) {
       case LOG_IN:
@@ -126,17 +70,12 @@ const initialState = {
         return applyLogOut(state,action);
       case SET_USER:
         return applySetUser(state,action);
-      case SET_PROFILE:
-        return applySetProfile(state,action);
-      case SET_VERIFYUNI:
-        return applySetVerifyUni(state,action);
       default:
         return state;
     }
   }
   
   // Reducer Functions
-  
   function applyLogIn(state,action){
     const { token } = action;
     return {
@@ -150,10 +89,7 @@ const initialState = {
     await AsyncStorage.clear();
     return {
       isLoggedIn:false,
-      makeProfile:false,
-      confirmUniv:false,
-      token: "",
-      profile: null
+      token:""
     }
   }
   function applySetUser(state,action){
@@ -163,25 +99,11 @@ const initialState = {
       profile: User,
     }
   }
-  function applySetProfile(state,action){
-    return {
-      ...state,
-      makeProfile:true,
-    }
-  }
-  function applySetVerifyUni(state,action){
-    return {
-      ...state,
-      confirmUniv:true
-    }
-  }
-  
 
   // Exports
 
   const actionCreators ={
     login,
-    userinfoRefresh
   };
   export { actionCreators };
   

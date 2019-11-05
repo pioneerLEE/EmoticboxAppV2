@@ -17,33 +17,38 @@ import AntDesign from 'react-native-vector-icons/AntDesign'; //apple1 google
 const {width,height}=Dimensions.get('window');
 
 class Landing extends React.Component {
+  static propTypes={
+    navigation: PropTypes.shape({
+      navigate: PropTypes.func.isRequired,
+    }).isRequired,
+  };
   render() {
     const { navigation }= this.props;
     return (
         <View style={styles.container}>
           <View style={styles.header}>
-            <Text style={{marginLeft:20, color:'rgb(142,142,142)',fontSize:16}}>More fun in your chat</Text>
-            <View style={{marginLeft:20,marginTop:5}}>
-              <Text style={{fontSize:32,fontWeight:'600',letterSpacing:3,zIndex: 999,}}>EmoticBox</Text>
-              <View style={{position: 'absolute',top: 25,backgroundColor: '#ffc100',width: 180,height: 10,zIndex: 0}}/>
+            <Text style={styles.subtitle}>More fun in your chat</Text>
+            <View style={styles.titleSection}>
+              <Text style={styles.titleText}>EmoticBox</Text>
+              <View style={styles.mark}/>
             </View>
           </View>
-          <View style={{flex:3.5,alignItems:'center'}}>
-            <TouchableOpacity style={{width:width-40,height:55,backgroundColor:'#000',borderRadius:10,flexDirection:'row',alignItems:'center'}}>
-              <AntDesign name="apple1" size={30} color="#fff" style={{marginLeft:width/6,marginRight:10}}/>
-              <Text style={{color:'#fff',fontSize:15,fontWeight:'500'}}>Login with Apple</Text>
+          <View style={styles.socialLoginSection}>
+            <TouchableOpacity style={[styles.loginBox,{backgroundColor:'#000'}]}>
+              <AntDesign name="apple1" size={30} color="#fff" style={styles.loginLogo}/>
+              <Text style={styles.loginText}>Login with Apple</Text>
             </TouchableOpacity>
-            <TouchableOpacity style={{width:width-40,height:55,backgroundColor:'rgb(66,103,178)',borderRadius:10,flexDirection:'row',alignItems:'center',marginTop:20}}>
-              <Entypo name="facebook" size={30} color="#fff" style={{marginLeft:width/6,marginRight:10}}/>
-              <Text style={{color:'#fff',fontSize:15,fontWeight:'500'}}>Login with Facebook</Text>
+            <TouchableOpacity style={[styles.loginBox,{backgroundColor:'rgb(66,103,178)',marginTop:20}]}>
+              <Entypo name="facebook" size={30} color="#fff" style={styles.loginLogo}/>
+              <Text style={styles.loginText}>Login with Facebook</Text>
             </TouchableOpacity>
-            <TouchableOpacity style={{width:width-40,height:55,backgroundColor:'#dd4b39',borderRadius:10,flexDirection:'row',alignItems:'center',marginTop:20}}>
-              <AntDesign name="google" size={30} color="#fff" style={{marginLeft:width/6,marginRight:10}}/>
-              <Text style={{color:'#fff',fontSize:15,fontWeight:'500'}}>Login with Google</Text>
+            <TouchableOpacity style={[styles.loginBox,{backgroundColor:'#dd4b39',marginTop:20}]}>
+              <AntDesign name="google" size={30} color="#fff" style={styles.loginLogo}/>
+              <Text style={styles.loginText}>Login with Google</Text>
             </TouchableOpacity>
-            <TouchableOpacity style={{width:width-40,height:55,backgroundColor:'orange',borderRadius:10,flexDirection:'row',alignItems:'center',marginTop:20}}>
-              <AntDesign name="mail" size={30} color="#fff" style={{marginLeft:width/6,marginRight:10}}/>
-              <Text style={{color:'#fff',fontSize:15,fontWeight:'500'}}>Login with Email</Text>
+            <TouchableOpacity style={[styles.loginBox,{backgroundColor:'orange',marginTop:20}]} onPressOut={()=>navigation.navigate('LoginScreen')}>
+              <AntDesign name="mail" size={30} color="#fff" style={styles.loginLogo}/>
+              <Text style={styles.loginText}>Login with Email</Text>
             </TouchableOpacity>
           </View>
           <View style={{flex:1.5,justifyContent:'center',flexDirection:'row'}}> 
@@ -57,8 +62,6 @@ class Landing extends React.Component {
     }
 }
 
-
-
 const styles = StyleSheet.create({
   container: {
     flex:1,
@@ -67,6 +70,49 @@ const styles = StyleSheet.create({
   header:{
     flex:3,
     justifyContent:'center'
+  },
+  subtitle:{
+    marginLeft:20, 
+    color:'rgb(142,142,142)',
+    fontSize:16
+  },
+  titleSection:{
+    marginLeft:20,
+    marginTop:5
+  },
+  titleText:{
+    fontSize:32,
+    fontWeight:'600',
+    letterSpacing:3,
+    zIndex: 999,
+  },
+  mark:{
+    position: 'absolute',
+    top: 25,
+    backgroundColor: '#ffc100',
+    width: 180,
+    height: 10,
+    zIndex: 0
+  },
+  socialLoginSection:{
+    flex:3.5,
+    alignItems:'center'
+  },
+  loginBox:{
+    width:width-40,
+    height:55,
+    borderRadius:10,
+    flexDirection:'row',
+    alignItems:'center'
+  },
+  loginLogo:{
+    marginLeft:width/6,
+    marginRight:10
+  },
+  loginText:{
+    color:'#fff',
+    fontSize:15,
+    fontWeight:'500'
   }
 });
 

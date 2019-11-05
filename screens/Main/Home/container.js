@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { Alert } from "react-native";
-import New from "./presenter";
+import Home from "./presenter";
 
 class Container extends Component {
   state = {
@@ -9,7 +9,7 @@ class Container extends Component {
   };
   render() {
     return (
-      <New 
+      <Home 
         {...this.state}
         {...this.props}
         resetSome={this._resetSome}

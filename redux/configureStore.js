@@ -5,7 +5,8 @@
 
 import { applyMiddleware, createStore } from "redux";
 import { persistStore, persistCombineReducers } from "redux-persist";
-import storage from "redux-persist/lib/storage";
+import AsyncStorage from '@react-native-community/async-storage';
+import storage from 'redux-persist/lib/storage'
 import thunk from "redux-thunk";
 import user from "./modules/user";
 

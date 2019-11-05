@@ -2,10 +2,10 @@ import React from 'react';
 import { createAppContainer } from 'react-navigation';
 import { createMaterialTopTabNavigator } from 'react-navigation-tabs';
 import { createStackNavigator } from 'react-navigation-stack';
-import Home from '../screens/Home';
-import Hot from '../screens/Hot';
-import New from '../screens/New';
-import Mypage from '../screens/Mypage';
+import Home from '../screens/Main/Home';
+import Hot from '../screens/Main/Hot';
+import New from '../screens/Main/New';
+import Mypage from '../screens/Main/Mypage';
 import Detail from '../screens/Detail'
 
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
@@ -106,7 +106,7 @@ export default Main = createAppContainer(createStackNavigator({
       title: 'EmoticBox',
     },
   },
-  DefailScreen: {
+  DetailScreen: {
     screen:Detail,
     navigationOptions: {
       headerBackTitle:null,
