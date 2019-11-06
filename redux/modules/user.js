@@ -96,7 +96,7 @@ const initialState = {
     const { User } = action;
     return {
       ...state,
-      profile: User,
+      Userinfo: User,
     }
   }
 

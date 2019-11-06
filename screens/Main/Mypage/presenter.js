@@ -18,7 +18,7 @@ class Mypage extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      isLoggedIn:true
+      isLoggedIn:false
     };
   }
   static propTypes={
@@ -62,12 +62,12 @@ class Mypage extends React.Component {
               <View>
                 <View style={{width:width,height:180,backgroundColor:'#fff',justifyContent:'center',alignItems:'center',marginBottom:20}}>
                   <Text style={{marginBottom:15,fontSize:18}}>More fun in your chat</Text>
-                  <TouchableOpacity style={{width:width-40,height:50, justifyContent:'center',alignItems:'center',backgroundColor:'orange',borderRadius:10}}>
+                  <TouchableOpacity onPressOut={()=>{navigation.navigate("LadingScreen")}} style={{width:width-40,height:50, justifyContent:'center',alignItems:'center',backgroundColor:'orange',borderRadius:10,}}>
                     <Text style={{color:'white',fontSize:18,fontWeight:'bold'}}>Create or Login</Text>
                   </TouchableOpacity>
                 </View>
-                <Touchbar navigation={navigation} next={'DetailScreen'}text={"공지사항"} />
-                <Touchbar navigation={navigation} next={'DetailScreen'}text={"이용안내"} />
+                <Touchbar navigation={navigation} next={'DetailScreen'}text={"공지사항"} right={true}/>
+                <Touchbar navigation={navigation} next={'DetailScreen'}text={"이용안내"} right={true}/>
               </View>
               )
             }

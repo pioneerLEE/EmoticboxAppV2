@@ -14,7 +14,7 @@ const middlewares = [thunk];
 
 const persistConfig = {
     key: "root",
-    storage
+    storage : AsyncStorage
 };
 // backlist:["user"]  을 하면 특정 모듈을 블랙리스트 처리 (제외) 하여 스토어에 저장되지 않는다.
 //키가 root인 state를 설정한다.
