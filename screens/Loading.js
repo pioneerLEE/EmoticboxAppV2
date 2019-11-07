@@ -7,22 +7,18 @@ import {
   TouchableOpacity,
   SafeAreaView,
   ScrollView,
-  Image
+  Image,
+  ActivityIndicator
 } from 'react-native';
 const {width,height}=Dimensions.get('window');
 import NewSection from './Components/NewSection'
 
 
-class New extends React.Component {
+class Loading extends React.Component {
   render() {
     return (
         <View style={styles.container}>
-          <ScrollView>
-            <NewSection/>
-            
-
-          </ScrollView>
-            
+          <ActivityIndicator size="small" color="#00ff00" />
         </View>
         );
     }
@@ -32,7 +28,10 @@ const styles = StyleSheet.create({
   container: {
       flex: 1,
       backgroundColor:'#ffffff',
+      justifyContent:'center',
+      alignItems:"center"
+      
   },
 });
 
-export default New;
+export default Loading;

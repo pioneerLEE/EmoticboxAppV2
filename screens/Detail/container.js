@@ -2,34 +2,48 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { Alert } from "react-native";
 import Detail from "./presenter";
+import Loading from "../Loading";
 import { API_URL } from '../../constants';
 class Container extends Component {
-  state ={
+  state={
     emojipackId:this.props.navigation.getParam('emojipackId',''),
     emojipack:{},
     author:{},
     emojis:[],
     isPurchsed:false,
+    isDibs:false
   }
   componentWillMount(){
     this._getemojipackDetail()
-    
   }
   render() {  
-    console.log("Emojipack",this.state.emojis[0])
-    return (
-      <Detail 
-        {...this.state}
-        {...this.props}
-      />
-    );
-  }
-  componentDidUpdate(){
+    if(!this.state.emojis[0]){
+      return(
+        <Loading/>
+      )
+    }
+    else{
+      return (
+        <Detail 
+          {...this.state}
+          {...this.props}
+          changeDibs = {this._changeDibs}
+        />
+      );
+    }
     
   }
-  //대표 이모티콘 불러오기
-  //유료 이모티콘 Top 9 불러오기
-  
+  _changeDibs=()=>{
+    const {isDibs} = this.state;
+    if(!isDibs){
+      //_checkDibs();
+    }else{
+      //_checkunDibs();
+    }
+    this.setState({
+      isDibs:!isDibs
+    })
+  }
   _getemojipackDetail = () =>{
     fetch(`${API_URL}/detail/${this.state.emojipackId}`,{
       method:"GET",
@@ -38,13 +52,13 @@ class Container extends Component {
       }
     })
     .then(response =>{
-      console.log("working?")
+      
       if(response.status == 201){
         return response.json();
       }
     })
     .then(json =>{
-      console.log
+      console.log("working??????????")
       this.setState({
         emojipack:json.exEmojipack,
         isPurchsed:json.isPurchsed,

@@ -22,7 +22,7 @@ class HomeHot extends React.Component {
   };
   render() {
     const { data,number,navigation } = this.props
-    console.log("data",data._id)
+    console.log("data",data)
     return (
       <TouchableOpacity style={{height:120,flexDirection:'row',alignItems:'center'}} onPressOut={()=>navigation.navigate('DetailScreen',{emojipackId:data._id})}>
         <Image source={{uri:`${API_URL}/load?path=${data.typicalEmoji}`}}
@@ -38,7 +38,7 @@ class HomeHot extends React.Component {
           <Text style={{marginLeft:15,marginTop:15,fontSize:15,color:'gray',letterSpacing: 1}}>{data.author.nick}</Text>
         </View>
         <View style={{marginTop:15,height:30,width:80,borderColor:'orange',borderRadius:20,borderWidth:1,justifyContent:'center',alignItems:'center'}}>
-          {data.isFree?<Text style={{fontSize:15, color:'#FF3F00',fontWeight:'100',letterSpacing: 2}}>free</Text>:<Text style={{fontSize:15, color:'#FF3F00',fontWeight:'100',letterSpacing: 2}}>$0.8</Text>}
+          {data.isFree?<Text style={{fontSize:15, color:'#FF3F00',fontWeight:'100',letterSpacing: 2}}>free</Text>:<Text style={{fontSize:15, color:'#FF3F00',fontWeight:'100',letterSpacing: 2}}>{"$ "+data.price}</Text>}
         </View>
       </TouchableOpacity>
     );

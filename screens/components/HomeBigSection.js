@@ -30,7 +30,7 @@ const Section = ()=>(
     <Text style={styles.creatorText}>{"정다슬"}</Text>
     <View style={styles.emojipackSection}>
       <View style={styles.emojipackBox}>
-        <Image style={styles.emojiImage} source={{uri: 'http://file3.instiz.net/data/file3/2018/03/16/5/b/8/5b8141787893806877611f1033bbdd29.gif'}}/>
+        <Image style={styles.emojiImage} source={{uri: 'https://www.hushwish.com/wp-content/uploads/2018/10/emo_malang_emot_004_x3.gif'}}/>
       </View>
     </View>
   </View>

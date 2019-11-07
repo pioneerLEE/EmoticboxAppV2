@@ -19,17 +19,17 @@ class HomeHotFreeSection extends React.Component {
     navigation: PropTypes.shape({
       navigate: PropTypes.func.isRequired,
     }).isRequired,
-    freeEmojiTop9:PropTypes.array.isRequired,
+    data:PropTypes.array.isRequired,
   };
   render() {
-    const { freeEmojiTop9,navigation } = this.props
+    const { data,navigation } = this.props
     return (
       <View>
         <Text style={{marginTop:10,marginLeft:20,fontWeight:'bold',fontSize:25}}>무료 스티커 순위</Text>
         <Swiper style={{height:360}} showsPagination={false}>
-          <Section data1={freeEmojiTop9[0]} data2={freeEmojiTop9[1]} data3={freeEmojiTop9[2]} number={1} navigation={navigation}/>
-          <Section data1={freeEmojiTop9[3]} data2={freeEmojiTop9[4]} data3={freeEmojiTop9[5]} number={4} navigation={navigation}/>
-          <Section data1={freeEmojiTop9[6]} data2={freeEmojiTop9[7]} data3={freeEmojiTop9[8]} number={7} navigation={navigation}/>
+          <Section data1={data[0]} data2={data[1]} data3={data[2]} number={1} navigation={navigation}/>
+          <Section data1={data[3]} data2={data[4]} data3={data[5]} number={4} navigation={navigation}/>
+          <Section data1={data[6]} data2={data[7]} data3={data[8]} number={7} navigation={navigation}/>
         </Swiper>
       </View>
       
