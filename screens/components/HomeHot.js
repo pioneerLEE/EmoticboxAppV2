@@ -22,7 +22,6 @@ class HomeHot extends React.Component {
   };
   render() {
     const { data,number,navigation } = this.props
-    console.log("data",data)
     return (
       <TouchableOpacity style={{height:120,flexDirection:'row',alignItems:'center'}} onPressOut={()=>navigation.navigate('DetailScreen',{emojipackId:data._id})}>
         <Image source={{uri:`${API_URL}/load?path=${data.typicalEmoji}`}}

@@ -9,16 +9,34 @@ import {
   ScrollView,
   Image
 } from 'react-native';
-const {width,height}=Dimensions.get('window');
-import NewSection from '../../Components/NewSection'
+import PropTypes from 'prop-types';
+import HotSection from '../../Components/HotSection'
 
+const {width,height}=Dimensions.get('window');
 
 class Hot extends React.Component {
+  static propTypes={
+    navigation: PropTypes.shape({
+      navigate: PropTypes.func.isRequired,
+    }).isRequired,
+    data:PropTypes.array.isRequired,
+  };
   render() {
+    const {navigation, data} = this.props;
     return (
         <View style={styles.container}>
           <ScrollView>
-            <NewSection/>
+            {
+              data.map((pack,index)=>{
+                return(
+                  <TouchableOpacity>
+                    <HotSection data={pack} number={index+1}/>
+                  </TouchableOpacity>
+                  
+                )
+              })
+            }
+            
             
 
           </ScrollView>

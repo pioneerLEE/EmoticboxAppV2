@@ -23,7 +23,7 @@ export default LandingStack = createAppContainer(createStackNavigator({
   },{
     initialRouteName: 'LadingScreen',
     defaultNavigationOptions:{
-      headerBackTitle:null,
+      header:null,
       headerStyle:{
         backgroundColor: '#fafafa',
           shadowColor: 'transparent',

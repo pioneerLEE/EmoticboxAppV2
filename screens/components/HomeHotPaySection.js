@@ -22,7 +22,6 @@ class HomeHotPaySection extends React.Component {
     data:PropTypes.array.isRequired,
   };
   render() {
-    console.log("HomeHotPaySection",this.props.freeEmojiTop9)
     const { data,navigation } = this.props
     return (
       <View>

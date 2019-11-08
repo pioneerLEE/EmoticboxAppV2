@@ -25,11 +25,12 @@ class Home extends React.Component {
       navigate: PropTypes.func.isRequired,
     }).isRequired,
     freeEmojiTop9:PropTypes.array.isRequired,
-    payEmojiTop9:PropTypes.array.isRequired
+    payEmojiTop9:PropTypes.array.isRequired,
+    creatorData:PropTypes.array.isRequired
   };
   render() {
     
-    const { navigation,freeEmojiTop9,payEmojiTop9 }= this.props;
+    const { navigation,freeEmojiTop9,payEmojiTop9,creatorData }= this.props;
     return (
         <View style={styles.container}>
           <ScrollView>
@@ -41,7 +42,7 @@ class Home extends React.Component {
             <LineComponent/>
             <HomeHotFreeSection data={freeEmojiTop9} navigation={navigation}/>
             <LineComponent/>
-            <HomeCreator/>
+            <HomeCreator data={creatorData} navigation={navigation}/>
             <HomeEndSection/>
           </ScrollView>
         </View>

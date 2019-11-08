@@ -2,65 +2,54 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { Alert } from "react-native";
 import Hot from "./presenter";
+import { API_URL } from '../../../constants';
+import Loading from "../../Loading";
 
 class Container extends Component {
   state = {
-    
+    data:null
   };
+  componentWillMount(){
+    this._getHotList();
+ 
+  }
   render() {
-    return (
-      <Hot 
-        {...this.state}
-        {...this.props}
-        resetSome={this._resetSome}
-        choiceSome={this._choiceSome}
-      />
-    );
+    const { data } = this.state; 
+    if(!(data)){
+      return(
+        <Loading/>
+      );
+    }else{
+      return (
+        <Hot 
+          {...this.state}
+          {...this.props}
+        />
+      );
+    }
   }
-  _resetSome = () =>{
-    this.setState({isSome:false});
-  }
-  _choiceSome = () =>{
-    this.setState({isSome:true});
-  }
-  _sendSome = () =>{
-    //some api 호출
-  }
-  _sendLike = () =>{
-    //like api 호출
-  }
-  _sendUnLike = () =>{
-    //unlike api 호출
+  _getHotList = () =>{
+    fetch(`${API_URL}/popularlist?isFree=-1&number=50`,{
+      method:"GET",
+      headers:{
+        "Content-Type" : "application/json"
+      }
+    })
+    .then(response =>{
+      if(response.status == 201){
+        return response.json();
+      }
+    })
+    .then(json =>{
+      this.setState({
+        data:json
+      })
+    })
+    .catch((error)=>{
+      console.error(error)
+    })
   }
   
-  _createTemporaryPassword = email =>{
-      fetch(`${API_URL}/forget/`,{
-          method: "PUT",
-          headers:{
-            "Content-Type" : "application/json"
-          },
-          body: JSON.stringify({
-            email:email,
-          })
-      })
-      .then(response => {
-          if(response.status === 400){
-            //서버 오류
-          }
-          else if(response.status === 204){
-            //회원가입된 메일이 아님
-          }else if(response.status === 201){
-            //임시 비밀번호 발급됨
-            this.setState({
-              isSubmittingEmail: true,
-            });
-          }
-        })
-        .catch(error =>{
-          console.error(error);
-          return { name: "network error", description: "" };
-        })
-  }
   
 }
 

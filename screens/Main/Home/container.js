@@ -7,15 +7,17 @@ import Loading from "../../Loading";
 class Container extends Component {
   state = {
     freeEmojiTop9:null,
-    payEmojiTop9:null
+    payEmojiTop9:null,
+    creatorData:null
   };
   componentWillMount(){
     this._getFreeEmojiTop9();
     this._getPayEmojiTop9();
+    this._getCreatorData();
   }
   render() {
-    const { freeEmojiTop9, payEmojiTop9 } = this.state; 
-    if(!(freeEmojiTop9 && payEmojiTop9)){
+    const { freeEmojiTop9, payEmojiTop9,creatorData } = this.state; 
+    if(!(freeEmojiTop9 && payEmojiTop9 && creatorData)){
       return(
         <Loading/>
       );
@@ -24,15 +26,31 @@ class Container extends Component {
         <Home 
           {...this.state}
           {...this.props}
-          resetSome={this._resetSome}
-          choiceSome={this._choiceSome}
         />
       );
     }
   }
-  //대표 이모티콘 불러오기
-  //유료 이모티콘 Top 9 불러오기
-  
+  _getCreatorData = () =>{
+    let url=``;
+    this.props.isLoggedIn ? (url=`${API_URL}/recommendedCreator`) : (url=`${API_URL}/bestCreator?number=10`);
+    fetch(url,{
+      method:'GET',
+      headers:{
+        "Content-Type" : "application/json"
+      }
+    })
+    .then(response => {
+      if(response.status == 201){
+        return response.json();
+      }
+    })
+    .then(json => {
+      this.setState({
+        creatorData:json
+      })
+    })
+
+  }
   _getFreeEmojiTop9 = () =>{
     fetch(`${API_URL}/popularlist?isFree=1&number=9`,{
       method:"GET",
@@ -46,7 +64,6 @@ class Container extends Component {
       }
     })
     .then(json =>{
-      console.log("Free",json)
       this.setState({
         freeEmojiTop9:json
       })
@@ -79,21 +96,7 @@ class Container extends Component {
     })
   }
   //특정 작가 이모티콘 
-  _resetSome = () =>{
-    this.setState({isSome:false});
-  }
-  _choiceSome = () =>{
-    this.setState({isSome:true});
-  }
-  _sendSome = () =>{
-    //some api 호출
-  }
-  _sendLike = () =>{
-    //like api 호출
-  }
-  _sendUnLike = () =>{
-    //unlike api 호출
-  }
+  
   
   _createTemporaryPassword = email =>{
       fetch(`${API_URL}/forget/`,{
