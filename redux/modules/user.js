@@ -37,6 +37,7 @@ function logOut(){
 
 // API Actions
 function login(email,password){
+  console.log("redux email:",email," passward:",password);
   return dispatch => {
     return fetch(`${API_URL}/signin`,{
       method:"POST",
@@ -50,9 +51,13 @@ function login(email,password){
     })
     .then(response => response.json())
     .then(json =>{
-      if(json.token){
+      console.log("로그인 정보 확인 토큰:"+json.token);
+      if(json.token && json.User){
         dispatch(setLogIn(json.token));
-        dispatch(setUser(json.userinfo));
+        dispatch(setUser(json.User));
+        return true;
+      }else{
+        return false;
       }
     })
   }

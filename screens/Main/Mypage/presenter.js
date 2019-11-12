@@ -18,7 +18,7 @@ class Mypage extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      isLoggedIn:false
+      
     };
   }
   static propTypes={
@@ -27,8 +27,7 @@ class Mypage extends React.Component {
     }).isRequired,
   };
   render() {
-    const { navigation }= this.props;
-    const { isLoggedIn } = this.state;
+    const { navigation,isLoggedIn }= this.props;
     return (
         <View style={styles.container}>
           <ScrollView>

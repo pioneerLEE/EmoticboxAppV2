@@ -32,7 +32,8 @@ class Container extends Component {
   }
   _getCreatorData = () =>{
     let url=``;
-    this.props.isLoggedIn ? (url=`${API_URL}/recommendedCreator`) : (url=`${API_URL}/bestCreator?number=10`);
+    //this.props.isLoggedIn ? (url=`${API_URL}/recommendedCreator`) : (url=`${API_URL}/bestCreator?number=10`);
+    url=`${API_URL}/bestCreator?number=10`;
     fetch(url,{
       method:'GET',
       headers:{
