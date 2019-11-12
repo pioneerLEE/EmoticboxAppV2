@@ -11,7 +11,6 @@ import {
   ActivityIndicator
 } from 'react-native';
 const {width,height}=Dimensions.get('window');
-import NewSection from './Components/NewSection'
 
 
 class Loading extends React.Component {
