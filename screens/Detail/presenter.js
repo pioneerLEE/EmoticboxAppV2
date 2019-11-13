@@ -27,6 +27,7 @@ class Detail extends React.Component {
     isPurchsed:PropTypes.bool.isRequired,
     isDibs:PropTypes.bool.isRequired,
     changeDibs:PropTypes.func.isRequired,
+    getPress:PropTypes.func.isRequired
   };
   constructor(props) {
     super(props);
@@ -40,7 +41,7 @@ class Detail extends React.Component {
     })
   }
   render() {
-    const {navigation,emojipack,isPurchsed,author,emojis,isDibs,changeDibs} = this.props;
+    const {navigation,emojipack,isPurchsed,author,emojis,isDibs,changeDibs,getPress} = this.props;
     console.log("detail",emojis)
     return (
         <View style={styles.container}>
@@ -86,7 +87,7 @@ class Detail extends React.Component {
               null
             ):(
               <View style={styles.getSection}>
-                <TouchableOpacity style={styles.getButton}>
+                <TouchableOpacity onPressOut={()=>getPress()} style={styles.getButton}>
                   <Text style={{color:'#FFFFFF',fontWeight:'bold'}}>GET</Text>
                 </TouchableOpacity>
                 <TouchableOpacity style={styles.sampleButton}>

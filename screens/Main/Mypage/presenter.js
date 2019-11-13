@@ -25,9 +25,14 @@ class Mypage extends React.Component {
     navigation: PropTypes.shape({
       navigate: PropTypes.func.isRequired,
     }).isRequired,
+    isLoggedIn: PropTypes.bool.isRequired,
+    Userinfo: PropTypes.object.isRequired,
   };
   render() {
-    const { navigation,isLoggedIn }= this.props;
+    
+    const { navigation,isLoggedIn,Userinfo }= this.props;
+
+    console.log('Userinfo',Userinfo);
     return (
         <View style={styles.container}>
           <ScrollView>
@@ -36,7 +41,7 @@ class Mypage extends React.Component {
               <View>
                 <View style={{width:width,height:150,backgroundColor:'#fff',justifyContent:'center',marginBottom:20}}>
                   <View style={{flexDirection:'row',alignItems:'center',marginLeft:20}}>
-                    <Text style={{marginBottom:15,fontSize:18}}>{"kde740998님 안녕하세요!"}</Text>
+                    <Text style={{marginBottom:15,fontSize:18}}>{Userinfo.email+"님 안녕하세요!"}</Text>
                   </View>
                   
                   <View style={{flexDirection:'row',marginTop:10,marginLeft:15}}>
@@ -51,9 +56,10 @@ class Mypage extends React.Component {
                 </View>
                 <Touchbar navigation={navigation} next={'DetailScreen'}text={"공지사항"} right={true}/>
                 <Touchbar navigation={navigation} next={'DetailScreen'}text={"이용안내"} right={true}/>
-                <Touchbar navigation={navigation} next={'DetailScreen'}text={"내 이모티콘들"} right={true}/>
                 <Touchbar navigation={navigation} next={'DetailScreen'}text={"연결된 서비스들"} right={true}/>
-
+                <Touchbar navigation={navigation} next={'DetailScreen'}text={"내 이모티콘들"} right={true}/>
+                <Touchbar navigation={navigation} next={'DetailScreen'}text={"찜한 이모티콘들"} right={true}/>
+                <View style={{height:20}}/>
                 <Touchbar navigation={navigation} next={'DetailScreen'}text={"로그아웃"} right={false}/>
                 
               </View>

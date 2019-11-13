@@ -28,10 +28,15 @@ class Container extends Component {
           {...this.state}
           {...this.props}
           changeDibs = {this._changeDibs}
+          getPress = {this._getPress}
         />
       );
     }
-    
+  }
+  _getPress=async()=>{
+
+    result = await this._getpack();
+    console.log(result)
   }
   _changeDibs=()=>{
     const {isDibs} = this.state;
@@ -42,6 +47,33 @@ class Container extends Component {
     }
     this.setState({
       isDibs:!isDibs
+    })
+  }
+  _getpack = () =>{
+    const { emojipackId} = this.state;
+    const { token,isLoggedIn } = this.props;
+    console.log(isLoggedIn)
+    if(!isLoggedIn){
+      return false;
+    }      
+    fetch(`$   {API_URL}/getpack`,{
+      method:"POST",
+      headers:{  
+        "Content-Type" : "application/json",
+        "Authorization": `Bearer ${token}`,
+      }, 
+      body: JSON.stringify({
+        emojipackid: emojipackId
+      })
+    })
+    .then(response=>{
+      console.log(response.status);
+      if(response.status == 200 ){
+        return true;
+      }
+      else{
+        return false;
+      }
     })
   }
   _getemojipackDetail = () =>{
