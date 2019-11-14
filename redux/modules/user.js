@@ -3,8 +3,7 @@
 // Imports
 
 import { API_URL } from '../../constants';
-import { AsyncStorage } from 'react-native';
-
+import AsyncStorage from '@react-native-community/async-storage';
 
 
 // Actions

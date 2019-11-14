@@ -1,8 +1,7 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { Alert } from "react-native";
-import Landing from "./presenter";
-import Loading from "../Loading";
+import Signup from "./presenter";
 import { API_URL } from '../../constants';
 class Container extends Component {
   state={
@@ -13,7 +12,7 @@ class Container extends Component {
   }
   render() {  
     return (
-      <Landing 
+      <Signup 
         {...this.state}
         {...this.props}
         changeDibs = {this._changeDibs}

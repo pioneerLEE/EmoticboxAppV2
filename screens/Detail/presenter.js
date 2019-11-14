@@ -27,7 +27,8 @@ class Detail extends React.Component {
     isPurchsed:PropTypes.bool.isRequired,
     isDibs:PropTypes.bool.isRequired,
     changeDibs:PropTypes.func.isRequired,
-    getPress:PropTypes.func.isRequired
+    getPress:PropTypes.func.isRequired,
+    path:PropTypes.string.isRequired
   };
   constructor(props) {
     super(props);
@@ -42,7 +43,6 @@ class Detail extends React.Component {
   }
   render() {
     const {navigation,emojipack,isPurchsed,author,emojis,isDibs,changeDibs,getPress} = this.props;
-    console.log("detail",emojis)
     return (
         <View style={styles.container}>
           <View>

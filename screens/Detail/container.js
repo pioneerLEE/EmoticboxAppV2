@@ -4,6 +4,8 @@ import { Alert } from "react-native";
 import Detail from "./presenter";
 import Loading from "../Loading";
 import { API_URL } from '../../constants';
+import * as RNFS from 'react-native-fs';
+
 class Container extends Component {
   state={
     emojipackId:this.props.navigation.getParam('emojipackId',''),
@@ -11,7 +13,8 @@ class Container extends Component {
     author:{},
     emojis:[],
     isPurchsed:false,
-    isDibs:false
+    isDibs:false,
+    path:'',
   }
   componentWillMount(){
     this._getemojipackDetail()
@@ -33,10 +36,25 @@ class Container extends Component {
       );
     }
   }
+  _downloadFile=(uri,path)=>{
+    RNFS.downloadFile({fromUrl:uri, toFile: path}).promise
+      .then(res =>this.loadFile(path));
+  }
   _getPress=async()=>{
-
-    result = await this._getpack();
+    const { emojipack } = this.state;
+    let result = await this._getpack();
+    let name = emojipack.name;
+    let uri = `${API_URL}/load?emojiId=${emojipack.typicalEmoji}`;
+    const extension = (Platform.OS === 'android') ? 'file://' : '' 
+    const path =`${extension}${RNFS.MainBundlePath}/${name}.gif`;
+    this.setState({
+      path:path
+    })
+    console.log("path",path)
     console.log(result)
+    if(result){
+      this._downloadFile(uri,path) ;
+    }
   }
   _changeDibs=()=>{
     const {isDibs} = this.state;
@@ -56,7 +74,7 @@ class Container extends Component {
     if(!isLoggedIn){
       return false;
     }      
-    fetch(`$   {API_URL}/getpack`,{
+    fetch(`${API_URL}/getpack`,{
       method:"POST",
       headers:{  
         "Content-Type" : "application/json",

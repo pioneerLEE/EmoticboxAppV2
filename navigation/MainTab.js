@@ -6,8 +6,11 @@ import Home from '../screens/Main/Home';
 import Hot from '../screens/Main/Hot';
 import New from '../screens/Main/New';
 import Mypage from '../screens/Main/Mypage';
-import Detail from '../screens/Detail'
-import LandingStack from './landingStack';
+import Detail from '../screens/Detail';
+import Landing from '../screens/Landing';
+import Login from '../screens/Login';
+
+
 
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
@@ -114,9 +117,18 @@ export default Main = createAppContainer(createStackNavigator({
       title: null,
     },
   },
-  LandingStack:{
-    screen:LandingStack
-  }
+  LadingScreen: {
+    screen: Landing,
+    navigationOptions: {
+      headerBackTitle: null,
+    },
+  },
+  LoginScreen: {
+    screen:Login,
+    navigationOptions: {
+      headerBackTitle:null,
+    },
+  },
 },{
   initialRouteName: 'MainScreen',
   defaultNavigationOptions:{

@@ -16,7 +16,7 @@ const {width,height}=Dimensions.get('screen');
 
 class HotSection extends React.Component {
   static propTypes={
-    data:PropTypes.array.isRequired,
+    data:PropTypes.object.isRequired,
     number:PropTypes.number.isRequired,
   };
   render() {

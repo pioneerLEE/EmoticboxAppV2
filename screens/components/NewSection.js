@@ -16,7 +16,7 @@ const {width,height}=Dimensions.get('screen');
 
 class NewSection extends React.Component {
   static propTypes={
-    data:PropTypes.array.isRequired,
+    data:PropTypes.object.isRequired,
   };
   render() {
     const { data } = this.props;

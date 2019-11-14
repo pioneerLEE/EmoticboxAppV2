@@ -52,9 +52,9 @@ class Landing extends React.Component {
             </TouchableOpacity>
           </View>
           <View style={{flex:1.5,justifyContent:'center',flexDirection:'row'}}> 
-            <Text style={{color:'rgb(142,142,142)',fontSize:15}}>No account? </Text>
+            <Text style={{color:'rgb(142,142,142)',fontSize:15,marginTop:30}}>No account? </Text>
             <TouchableOpacity>
-              <Text style={{fontSize:15,color:'orange'}}>Create one!</Text>
+              <Text style={{fontSize:15,color:'orange',marginTop:30}}>Create one!</Text>
             </TouchableOpacity>
           </View >
         </View>
@@ -65,13 +65,12 @@ class Landing extends React.Component {
 const styles = StyleSheet.create({
   container: {
     flex:1,
-    backgroundColor:'#fafafa',
   },
   header:{
     flex:3,
-    justifyContent:'center'
   },
   subtitle:{
+    marginTop:70,
     marginLeft:20, 
     color:'rgb(142,142,142)',
     fontSize:16
