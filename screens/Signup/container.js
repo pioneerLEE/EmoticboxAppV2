@@ -53,17 +53,32 @@ class Container extends Component {
         this.setState({
           isSubmitting: true
         });
-        loginResult = await this._CreateNew();
-        if (!loginResult) {
-          console.log("check loginResult");
-          Alert.alert("Something went wrong, try again");
-          this.setState({ isSubmitting: false });
-        }else{
-          this.setState({
-            isSignup:true
+        fetch(`${API_URL}/signup/user`,{
+          method:"POST",
+          headers:{  
+            "Content-Type" : "application/json",
+          }, 
+          body: JSON.stringify({
+            email,
+            password, 
+            nick, 
+            birth
           })
-        }
-      } else {
+        })
+        .then(response=>{
+          console.log(response.status);
+          if(response.status == 201 ){
+            this.setState({
+              isSignup:true
+            })
+          }
+          else{
+            console.log("check loginResult");
+            Alert.alert("Something went wrong, try again");
+            this.setState({ isSubmitting: false });
+          }
+        })
+      }else {
         Alert.alert("All fields are required");
       }
     }
@@ -73,27 +88,7 @@ class Container extends Component {
     if(isSignup || isSubmitting){
       return false;
     }      
-    fetch(`${API_URL}/signup/user`,{
-      method:"POST",
-      headers:{  
-        "Content-Type" : "application/json",
-      }, 
-      body: JSON.stringify({
-        email,
-        password, 
-        nick, 
-        birth
-      })
-    })
-    .then(response=>{
-      console.log(response.status);
-      if(response.status == 201 ){
-        return true;
-      }
-      else{
-        return false;
-      }
-    })
+    
   }  
 }
 

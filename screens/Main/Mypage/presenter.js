@@ -57,7 +57,7 @@ class Mypage extends React.Component {
                 <Touchbar navigation={navigation} next={'NoticeScreen'}text={"공지사항"} right={true}/>
                 <Touchbar navigation={navigation} next={'DetailScreen'}text={"이용안내"} right={true}/>
                 <Touchbar navigation={navigation} next={'DetailScreen'}text={"연결된 서비스들"} right={true}/>
-                <Touchbar navigation={navigation} next={'DetailScreen'}text={"내 이모티콘들"} right={true}/>
+                <Touchbar navigation={navigation} next={'MypacklistScreen'}text={"내 이모티콘들"} right={true}/>
                 <Touchbar navigation={navigation} next={'DetailScreen'}text={"찜한 이모티콘들"} right={true}/>
                 <View style={{height:20}}/>
                 <Touchbar navigation={navigation} next={'DetailScreen'}text={"로그아웃"} right={false}/>

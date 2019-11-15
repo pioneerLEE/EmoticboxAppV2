@@ -12,7 +12,7 @@ class Container extends Component {
     isLogin:false,
   }
   render() {  
-    console.log("email: ",this.state.email)
+
     return (
       <Login 
         {...this.state}
