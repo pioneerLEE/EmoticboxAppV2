@@ -54,7 +54,7 @@ class Mypage extends React.Component {
                   </View>
                   
                 </View>
-                <Touchbar navigation={navigation} next={'DetailScreen'}text={"공지사항"} right={true}/>
+                <Touchbar navigation={navigation} next={'NoticeScreen'}text={"공지사항"} right={true}/>
                 <Touchbar navigation={navigation} next={'DetailScreen'}text={"이용안내"} right={true}/>
                 <Touchbar navigation={navigation} next={'DetailScreen'}text={"연결된 서비스들"} right={true}/>
                 <Touchbar navigation={navigation} next={'DetailScreen'}text={"내 이모티콘들"} right={true}/>
@@ -71,7 +71,7 @@ class Mypage extends React.Component {
                     <Text style={{color:'white',fontSize:18,fontWeight:'bold'}}>Create or Login</Text>
                   </TouchableOpacity>
                 </View>
-                <Touchbar navigation={navigation} next={'DetailScreen'}text={"공지사항"} right={true}/>
+                <Touchbar navigation={navigation} next={'NoticeScreen'}text={"공지사항"} right={true}/>
                 <Touchbar navigation={navigation} next={'DetailScreen'}text={"이용안내"} right={true}/>
               </View>
               )

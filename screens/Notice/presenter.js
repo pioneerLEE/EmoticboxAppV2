@@ -16,7 +16,7 @@ import AntDesign from 'react-native-vector-icons/AntDesign'; //apple1 google
 
 const {width,height}=Dimensions.get('window');
 
-class Signup extends React.Component {
+class Notice extends React.Component {
   static propTypes={
     navigation: PropTypes.shape({
       navigate: PropTypes.func.isRequired,
@@ -40,4 +40,4 @@ const styles = StyleSheet.create({
   
 });
 
-export default Signup;
+export default Notice;

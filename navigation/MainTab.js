@@ -9,7 +9,9 @@ import Mypage from '../screens/Main/Mypage';
 import Detail from '../screens/Detail';
 import Landing from '../screens/Landing';
 import Login from '../screens/Login';
-
+import Mypacklist from '../screens/Mypacklist';
+import Notice from '../screens/Notice';
+import Signup from '../screens/Signup'
 
 
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
@@ -129,6 +131,25 @@ export default Main = createAppContainer(createStackNavigator({
       headerBackTitle:null,
     },
   },
+  MypacklistScreen:{
+    screen:Mypacklist,
+    navigationOptions:{
+      headerBackTitle: null,
+    },
+  },
+  NoticeScreen:{
+    screen:Notice,
+    navigationOptions:{
+      headerBackTitle: null,
+    },
+  },
+  SignupScreen:{
+    screen:Signup,
+    navigationOptions:{
+      headerBackTitle: null,
+      title:"Signup"
+    },
+  }
 },{
   initialRouteName: 'MainScreen',
   defaultNavigationOptions:{

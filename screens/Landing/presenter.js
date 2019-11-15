@@ -53,7 +53,7 @@ class Landing extends React.Component {
           </View>
           <View style={{flex:1.5,justifyContent:'center',flexDirection:'row'}}> 
             <Text style={{color:'rgb(142,142,142)',fontSize:15,marginTop:30}}>No account? </Text>
-            <TouchableOpacity>
+            <TouchableOpacity onPressOut={()=>{navigation.navigate('SignupScreen')}}>
               <Text style={{fontSize:15,color:'orange',marginTop:30}}>Create one!</Text>
             </TouchableOpacity>
           </View >

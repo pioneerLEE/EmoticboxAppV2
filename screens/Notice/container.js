@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { Alert } from "react-native";
-import Landing from "./presenter";
+import Notice from "./presenter";
 import Loading from "../Loading";
 import { API_URL } from '../../constants';
 class Container extends Component {
@@ -13,10 +13,9 @@ class Container extends Component {
   }
   render() {  
     return (
-      <Landing 
+      <Notice 
         {...this.state}
         {...this.props}
-        changeDibs = {this._changeDibs}
       />
     );
   }  
