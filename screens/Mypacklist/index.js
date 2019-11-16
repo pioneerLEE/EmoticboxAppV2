@@ -9,9 +9,8 @@ const mapStateToProps = (state, ownProps) => {
   const { user } = state;
   return {
     isLoggedIn: user.isLoggedIn,
-    makeProfile: user.makeProfile,
     token: user.token,
-    profile: user.profile
+    Userinfo: user.Userinfo
   };
 };
 

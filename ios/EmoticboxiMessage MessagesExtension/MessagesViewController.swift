@@ -9,7 +9,7 @@ import UIKit
 import Messages
 
 class MessagesViewController: MSMessagesAppViewController {
-    let imageNames = ["오이수고"]
+    let imageNames = ["1","2","3","4","5","6","7"]
     var stickers = [MSSticker]()
     
     @IBOutlet weak var browser: MSStickerBrowserView!

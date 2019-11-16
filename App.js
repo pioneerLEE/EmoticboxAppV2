@@ -11,6 +11,9 @@ import configureStore from "./redux/configureStore";
 import AppContainer from "./AppContainer";
 const { persistor, store } = configureStore(); //함수로 선언했으므로... 뒤에 ()
 
+import {YellowBox} from 'react-native';
+YellowBox.ignoreWarnings(['Warning: ReactNative.createElement']);
+
 // import MainTab from './navigation/MainTab';
 // import LandingStack from './navigation/landingStack'
 
@@ -19,6 +22,7 @@ const { persistor, store } = configureStore(); //함수로 선언했으므로...
 //store.dispatch({type:"LOG_OUT" });
 class App extends React.Component {
   render() {
+    console.disableYellowBox = true;
     return (
       <Provider store={store}>
         <PersistGate persistor={persistor}>

@@ -135,6 +135,7 @@ export default Main = createAppContainer(createStackNavigator({
     screen:Mypacklist,
     navigationOptions:{
       headerBackTitle: null,
+      title:"My Stickers"
     },
   },
   NoticeScreen:{

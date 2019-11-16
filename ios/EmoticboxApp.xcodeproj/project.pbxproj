@@ -15,7 +15,30 @@
 		0E58D79D23575B570023DA6C /* MessagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E58D79C23575B570023DA6C /* MessagesViewController.swift */; };
 		0E58D7A023575B570023DA6C /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E58D79E23575B570023DA6C /* MainInterface.storyboard */; };
 		0E58D7A223575B580023DA6C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E58D7A123575B580023DA6C /* Assets.xcassets */; };
-		0EE51551235F199500AA088F /* 오이수고.gif in Resources */ = {isa = PBXBuildFile; fileRef = 0EE51550235F199500AA088F /* 오이수고.gif */; };
+		0EC91A03238000F400068E0F /* 17.gif in Resources */ = {isa = PBXBuildFile; fileRef = 0EC919EB238000F200068E0F /* 17.gif */; };
+		0EC91A04238000F400068E0F /* 5.gif in Resources */ = {isa = PBXBuildFile; fileRef = 0EC919EC238000F200068E0F /* 5.gif */; };
+		0EC91A05238000F400068E0F /* 3.gif in Resources */ = {isa = PBXBuildFile; fileRef = 0EC919ED238000F200068E0F /* 3.gif */; };
+		0EC91A06238000F400068E0F /* 2.gif in Resources */ = {isa = PBXBuildFile; fileRef = 0EC919EE238000F200068E0F /* 2.gif */; };
+		0EC91A07238000F400068E0F /* 9.gif in Resources */ = {isa = PBXBuildFile; fileRef = 0EC919EF238000F200068E0F /* 9.gif */; };
+		0EC91A08238000F400068E0F /* 11.gif in Resources */ = {isa = PBXBuildFile; fileRef = 0EC919F0238000F200068E0F /* 11.gif */; };
+		0EC91A09238000F400068E0F /* 20.gif in Resources */ = {isa = PBXBuildFile; fileRef = 0EC919F1238000F200068E0F /* 20.gif */; };
+		0EC91A0A238000F400068E0F /* 7.gif in Resources */ = {isa = PBXBuildFile; fileRef = 0EC919F2238000F300068E0F /* 7.gif */; };
+		0EC91A0B238000F400068E0F /* 22.gif in Resources */ = {isa = PBXBuildFile; fileRef = 0EC919F3238000F300068E0F /* 22.gif */; };
+		0EC91A0C238000F400068E0F /* 23.gif in Resources */ = {isa = PBXBuildFile; fileRef = 0EC919F4238000F300068E0F /* 23.gif */; };
+		0EC91A0D238000F400068E0F /* 19.gif in Resources */ = {isa = PBXBuildFile; fileRef = 0EC919F5238000F300068E0F /* 19.gif */; };
+		0EC91A0E238000F400068E0F /* 8.gif in Resources */ = {isa = PBXBuildFile; fileRef = 0EC919F6238000F300068E0F /* 8.gif */; };
+		0EC91A0F238000F400068E0F /* 10.gif in Resources */ = {isa = PBXBuildFile; fileRef = 0EC919F7238000F300068E0F /* 10.gif */; };
+		0EC91A10238000F400068E0F /* 18.gif in Resources */ = {isa = PBXBuildFile; fileRef = 0EC919F8238000F300068E0F /* 18.gif */; };
+		0EC91A11238000F400068E0F /* 12.gif in Resources */ = {isa = PBXBuildFile; fileRef = 0EC919F9238000F300068E0F /* 12.gif */; };
+		0EC91A12238000F400068E0F /* 4.gif in Resources */ = {isa = PBXBuildFile; fileRef = 0EC919FA238000F300068E0F /* 4.gif */; };
+		0EC91A13238000F400068E0F /* 1.gif in Resources */ = {isa = PBXBuildFile; fileRef = 0EC919FB238000F300068E0F /* 1.gif */; };
+		0EC91A14238000F400068E0F /* 21.gif in Resources */ = {isa = PBXBuildFile; fileRef = 0EC919FC238000F400068E0F /* 21.gif */; };
+		0EC91A15238000F400068E0F /* 15.gif in Resources */ = {isa = PBXBuildFile; fileRef = 0EC919FD238000F400068E0F /* 15.gif */; };
+		0EC91A16238000F400068E0F /* 24.gif in Resources */ = {isa = PBXBuildFile; fileRef = 0EC919FE238000F400068E0F /* 24.gif */; };
+		0EC91A17238000F400068E0F /* 6.gif in Resources */ = {isa = PBXBuildFile; fileRef = 0EC919FF238000F400068E0F /* 6.gif */; };
+		0EC91A18238000F400068E0F /* 14.gif in Resources */ = {isa = PBXBuildFile; fileRef = 0EC91A00238000F400068E0F /* 14.gif */; };
+		0EC91A19238000F400068E0F /* 13.gif in Resources */ = {isa = PBXBuildFile; fileRef = 0EC91A01238000F400068E0F /* 13.gif */; };
+		0EC91A1A238000F400068E0F /* 16.gif in Resources */ = {isa = PBXBuildFile; fileRef = 0EC91A02238000F400068E0F /* 16.gif */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB11A68108700A75B9A /* LaunchScreen.xib */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
@@ -101,7 +124,30 @@
 		0E58D7A123575B580023DA6C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0E58D7A323575B580023DA6C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0E615B1AA4B5459594A4FD3F /* Zocial.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Zocial.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Zocial.ttf"; sourceTree = "<group>"; };
-		0EE51550235F199500AA088F /* 오이수고.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "오이수고.gif"; sourceTree = "<group>"; };
+		0EC919EB238000F200068E0F /* 17.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = 17.gif; path = "../../../이모티콘/17.gif"; sourceTree = "<group>"; };
+		0EC919EC238000F200068E0F /* 5.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = 5.gif; path = "../../../이모티콘/5.gif"; sourceTree = "<group>"; };
+		0EC919ED238000F200068E0F /* 3.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = 3.gif; path = "../../../이모티콘/3.gif"; sourceTree = "<group>"; };
+		0EC919EE238000F200068E0F /* 2.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = 2.gif; path = "../../../이모티콘/2.gif"; sourceTree = "<group>"; };
+		0EC919EF238000F200068E0F /* 9.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = 9.gif; path = "../../../이모티콘/9.gif"; sourceTree = "<group>"; };
+		0EC919F0238000F200068E0F /* 11.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = 11.gif; path = "../../../이모티콘/11.gif"; sourceTree = "<group>"; };
+		0EC919F1238000F200068E0F /* 20.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = 20.gif; path = "../../../이모티콘/20.gif"; sourceTree = "<group>"; };
+		0EC919F2238000F300068E0F /* 7.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = 7.gif; path = "../../../이모티콘/7.gif"; sourceTree = "<group>"; };
+		0EC919F3238000F300068E0F /* 22.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = 22.gif; path = "../../../이모티콘/22.gif"; sourceTree = "<group>"; };
+		0EC919F4238000F300068E0F /* 23.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = 23.gif; path = "../../../이모티콘/23.gif"; sourceTree = "<group>"; };
+		0EC919F5238000F300068E0F /* 19.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = 19.gif; path = "../../../이모티콘/19.gif"; sourceTree = "<group>"; };
+		0EC919F6238000F300068E0F /* 8.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = 8.gif; path = "../../../이모티콘/8.gif"; sourceTree = "<group>"; };
+		0EC919F7238000F300068E0F /* 10.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = 10.gif; path = "../../../이모티콘/10.gif"; sourceTree = "<group>"; };
+		0EC919F8238000F300068E0F /* 18.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = 18.gif; path = "../../../이모티콘/18.gif"; sourceTree = "<group>"; };
+		0EC919F9238000F300068E0F /* 12.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = 12.gif; path = "../../../이모티콘/12.gif"; sourceTree = "<group>"; };
+		0EC919FA238000F300068E0F /* 4.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = 4.gif; path = "../../../이모티콘/4.gif"; sourceTree = "<group>"; };
+		0EC919FB238000F300068E0F /* 1.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = 1.gif; path = "../../../이모티콘/1.gif"; sourceTree = "<group>"; };
+		0EC919FC238000F400068E0F /* 21.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = 21.gif; path = "../../../이모티콘/21.gif"; sourceTree = "<group>"; };
+		0EC919FD238000F400068E0F /* 15.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = 15.gif; path = "../../../이모티콘/15.gif"; sourceTree = "<group>"; };
+		0EC919FE238000F400068E0F /* 24.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = 24.gif; path = "../../../이모티콘/24.gif"; sourceTree = "<group>"; };
+		0EC919FF238000F400068E0F /* 6.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = 6.gif; path = "../../../이모티콘/6.gif"; sourceTree = "<group>"; };
+		0EC91A00238000F400068E0F /* 14.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = 14.gif; path = "../../../이모티콘/14.gif"; sourceTree = "<group>"; };
+		0EC91A01238000F400068E0F /* 13.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = 13.gif; path = "../../../이모티콘/13.gif"; sourceTree = "<group>"; };
+		0EC91A02238000F400068E0F /* 16.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = 16.gif; path = "../../../이모티콘/16.gif"; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* EmoticboxApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EmoticboxApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = EmoticboxApp/AppDelegate.h; sourceTree = "<group>"; };
 		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = EmoticboxApp/AppDelegate.m; sourceTree = "<group>"; };
@@ -219,7 +265,30 @@
 		0E58D79B23575B570023DA6C /* EmoticboxiMessage MessagesExtension */ = {
 			isa = PBXGroup;
 			children = (
-				0EE51550235F199500AA088F /* 오이수고.gif */,
+				0EC919FB238000F300068E0F /* 1.gif */,
+				0EC919EE238000F200068E0F /* 2.gif */,
+				0EC919ED238000F200068E0F /* 3.gif */,
+				0EC919FA238000F300068E0F /* 4.gif */,
+				0EC919EC238000F200068E0F /* 5.gif */,
+				0EC919FF238000F400068E0F /* 6.gif */,
+				0EC919F2238000F300068E0F /* 7.gif */,
+				0EC919F6238000F300068E0F /* 8.gif */,
+				0EC919EF238000F200068E0F /* 9.gif */,
+				0EC919F7238000F300068E0F /* 10.gif */,
+				0EC919F0238000F200068E0F /* 11.gif */,
+				0EC919F9238000F300068E0F /* 12.gif */,
+				0EC91A01238000F400068E0F /* 13.gif */,
+				0EC91A00238000F400068E0F /* 14.gif */,
+				0EC919FD238000F400068E0F /* 15.gif */,
+				0EC91A02238000F400068E0F /* 16.gif */,
+				0EC919EB238000F200068E0F /* 17.gif */,
+				0EC919F8238000F300068E0F /* 18.gif */,
+				0EC919F5238000F300068E0F /* 19.gif */,
+				0EC919F1238000F200068E0F /* 20.gif */,
+				0EC919FC238000F400068E0F /* 21.gif */,
+				0EC919F3238000F300068E0F /* 22.gif */,
+				0EC919F4238000F300068E0F /* 23.gif */,
+				0EC919FE238000F400068E0F /* 24.gif */,
 				0E58D79C23575B570023DA6C /* MessagesViewController.swift */,
 				0E58D79E23575B570023DA6C /* MainInterface.storyboard */,
 				0E58D7A123575B580023DA6C /* Assets.xcassets */,
@@ -461,6 +530,7 @@
 				TargetAttributes = {
 					00E356ED1AD99517003FC87E = {
 						CreatedOnToolsVersion = 6.2;
+						DevelopmentTeam = A655GWRW8G;
 						TestTargetID = 13B07F861A680F5B00A75B9A;
 					};
 					0E58D78B23575B560023DA6C = {
@@ -531,9 +601,32 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0EE51551235F199500AA088F /* 오이수고.gif in Resources */,
+				0EC91A0D238000F400068E0F /* 19.gif in Resources */,
+				0EC91A07238000F400068E0F /* 9.gif in Resources */,
+				0EC91A15238000F400068E0F /* 15.gif in Resources */,
+				0EC91A03238000F400068E0F /* 17.gif in Resources */,
+				0EC91A10238000F400068E0F /* 18.gif in Resources */,
+				0EC91A09238000F400068E0F /* 20.gif in Resources */,
+				0EC91A14238000F400068E0F /* 21.gif in Resources */,
 				0E58D7A223575B580023DA6C /* Assets.xcassets in Resources */,
+				0EC91A04238000F400068E0F /* 5.gif in Resources */,
+				0EC91A08238000F400068E0F /* 11.gif in Resources */,
+				0EC91A0A238000F400068E0F /* 7.gif in Resources */,
+				0EC91A0B238000F400068E0F /* 22.gif in Resources */,
+				0EC91A16238000F400068E0F /* 24.gif in Resources */,
+				0EC91A1A238000F400068E0F /* 16.gif in Resources */,
+				0EC91A06238000F400068E0F /* 2.gif in Resources */,
+				0EC91A0F238000F400068E0F /* 10.gif in Resources */,
+				0EC91A19238000F400068E0F /* 13.gif in Resources */,
+				0EC91A18238000F400068E0F /* 14.gif in Resources */,
+				0EC91A17238000F400068E0F /* 6.gif in Resources */,
 				0E58D7A023575B570023DA6C /* MainInterface.storyboard in Resources */,
+				0EC91A13238000F400068E0F /* 1.gif in Resources */,
+				0EC91A0E238000F400068E0F /* 8.gif in Resources */,
+				0EC91A05238000F400068E0F /* 3.gif in Resources */,
+				0EC91A12238000F400068E0F /* 4.gif in Resources */,
+				0EC91A11238000F400068E0F /* 12.gif in Resources */,
+				0EC91A0C238000F400068E0F /* 23.gif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -873,6 +966,8 @@
 			baseConfigurationReference = 0C1C09029279A61AA0CAC9AA /* Pods-EmoticboxAppTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
+				DEVELOPMENT_TEAM = A655GWRW8G;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -896,7 +991,9 @@
 			baseConfigurationReference = DB91CD18A915A39E93ED09B6 /* Pods-EmoticboxAppTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				COPY_PHASE_STRIP = NO;
+				DEVELOPMENT_TEAM = A655GWRW8G;
 				INFOPLIST_FILE = EmoticboxAppTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";

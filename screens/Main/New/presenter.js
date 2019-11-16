@@ -30,7 +30,7 @@ class New extends React.Component {
             data.map((pack,index)=>{
               return(
                 <TouchableOpacity>
-                  <NewSection data={pack} number={index+1}/>
+                  <NewSection data={pack}/>
                 </TouchableOpacity>                
               )
             })
